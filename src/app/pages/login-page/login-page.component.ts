@@ -21,20 +21,18 @@ export class LoginPageComponent {
 
   onSubmit() {
     if (this.form.valid) {
-      // const loginData = {
-      //   username: this.form.value.username!,
-      //   password: this.form.value.password!
-      // };
-      // this.authService.login(loginData)
+      const loginData = {
+        username: this.form.value.username!,
+        password: this.form.value.password!
+      };
 
-
-      //@ts-ignore
-        this.authService.login(this.form.valid)
+      this.authService.login(loginData)
         .subscribe(res => {
           this.router.navigate(['']);
           console.log(res);
         });
     }
   }
+
 
 }
