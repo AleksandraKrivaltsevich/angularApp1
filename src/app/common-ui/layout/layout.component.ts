@@ -1,7 +1,6 @@
 import {Component, inject} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from "../sidebar/sidebar.component";
-import {ProfileService} from '../../date/services/profile.service';
 
 @Component({
   selector: 'app-layout',
@@ -11,14 +10,7 @@ import {ProfileService} from '../../date/services/profile.service';
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
-  profileService = inject(ProfileService)
 
-  ngOnInit() {
-    console.log('ngOnInit()')
-    this.profileService.getMe().subscribe(val => {
-      console.log(val)
-    })
-  }
 }
 
 
