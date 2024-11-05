@@ -12,13 +12,12 @@
 <p class="mb20">Подписчики</p>
 
 
-@for (profile of subscribers$ | async; track profile.id) {
+@for (subscriber of subscribers$ | async; track subscriber.id) {
   <app-subscriber-card
-    [profile]="profile"
+    [profile]="subscriber"
   ></app-subscriber-card>
 }
 
-<!--<pre>{{ subscribers$ | async | json }}</pre>-->
 
 <div class="mt20 to-subscribers">
   <a
