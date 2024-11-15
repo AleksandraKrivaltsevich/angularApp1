@@ -39,8 +39,9 @@ export class ProfileService {
 
   patchProfile(profile: Partial<Profile>) {
     return this.http.patch<Profile>(
-      `${this.baseApiUrl}account/me}`,
-      profile)
+      `${this.baseApiUrl}account/me`,
+      profile
+    )
   }
 
   uploadAvatar(file:File) {

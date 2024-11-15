@@ -4,6 +4,7 @@
   --dark-color: #000000;
   --light-color: #FFFFFF;
   --primary-color: #AE7AFF;
+  --light-transparent-color: rgba(255, 255, 255, 0.75);
 }
 
 *:before,
@@ -109,4 +110,40 @@ body {
   line-height: 21px;
   color: var(--light-color);
 
+}
+
+.app-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}
+.app-form-label__text{
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  font-style: normal;
+  color: var(--light-transparent-color);
+}
+
+.app-form-input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  font-style: normal;
+  background: none;
+  color: var(--light-color);
+  border: none;
+  border-bottom: 1px solid var(--light-color);
+  height: 33px;
+
+  &:focus-visible {
+    outline: 1px solid var(--primary-color);
+  }
+}
+
+
+.app-textarea {
+  height: 84px;
+  resize: none;
 }
