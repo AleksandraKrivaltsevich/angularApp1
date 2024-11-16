@@ -1,0 +1,19 @@
+<form class = "profile-search-form" [formGroup]="searchForm">
+    <div class = "two-columns">
+      <label class = "app-form-label">
+        <span class = "app-form-label__text">Имя</span>
+        <input type = "text" class = "app-form-input" formControlName="firstName">
+      </label>
+
+      <label class = "app-form-label">
+        <span class = "app-form-label__text">Фамилия</span>
+        <input type = "text" class = "app-form-input" formControlName="lastName">
+      </label>
+
+
+      <label class = "app-form-label">
+        <span class = "app-form-label__text">Навыки</span>
+        <input type = "text" class = "app-form-input" formControlName="stack">
+      </label>
+    </div>
+</form>
